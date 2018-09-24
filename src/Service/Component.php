@@ -28,9 +28,11 @@ class Component
         $component->setHeight($data['height']);
         $component->setType($data['type']);
         if($data['type'] == 'text'){
-           $component->setText($data['text']); 
+            $component->setText($data['text']); 
         } else {
-            
+            $component->setLink($data['link']);
+            $component->setFormat($data['format']);
+            $component->setSize($data['size']);
         }
         $component->setCreatedAt();
         $this->em->persist($component);

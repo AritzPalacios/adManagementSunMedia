@@ -44,16 +44,16 @@ class Component
     protected $type;
     
     /** @ORM\Column(type="string") **/
-    protected $link;
+    protected $link = null;
     
     /** @ORM\Column(type="string") **/
-    protected $format;
+    protected $format = null;
     
     /** @ORM\Column(type="float") **/
-    protected $size;
+    protected $size = null;
 
     /** @ORM\Column(type="string", length=140) **/
-    protected $text;
+    protected $text = null;
     
     /**
      * @ORM\ManyToOne(targetEntity="Entity\Ad", inversedBy="components")

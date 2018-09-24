@@ -44,15 +44,16 @@ class Ad
     
     public function addComponent(Ad $ad, Component $component) {
         $ad->addComponent($component);
+        $ad->setUpdatedAt();
         $this->em->persist($ad);
         $this->em->flush();
         
         return $ad;
     }
     
-    public function removeComponent(Ad $ad, Component $component)
-    {
+    public function removeComponent(Ad $ad, Component $component){
         $ad->removeComponent($component);
+        $ad->setUpdatedAt();
         $this->em->persist($ad);
         $this->em->flush();
         
