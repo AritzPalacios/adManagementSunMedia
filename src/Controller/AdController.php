@@ -26,7 +26,7 @@ class AdController extends AbstractController {
     }
     
     /**
-     * 
+     * @Route("/adEdit/{ad_id}")
      * @ParamConverter("ad", options={"id" = "ad_id"})
      */
     public function EditAction(Ad $ad) {
