@@ -1,0 +1,7 @@
+services:
+    Ad:
+        class: Service/Ad
+        arguments: ['@doctrine.orm.entity_manager']
+    Component:
+        class: Service/Component
+        arguments: ['@doctrine.orm.entity_manager']
