@@ -5,6 +5,9 @@
  * @author aritz
  */
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+ 
 use Form\AdType;
 
 
@@ -27,7 +30,7 @@ class AdController extends AbstractController {
     
     /**
      * @Route("/adEdit/{ad_id}")
-     * @ParamConverter("ad", options={"id" = "ad_id"})
+     * @ParamConverter("ad", class="Ad" options={"id" = "ad_id"})
      */
     public function EditAction(Ad $ad) {
         
